@@ -1,0 +1,98 @@
+SQL 
+
+
+Structured Query Language
+
+
+Linux
+ls
+cd
+mkdir
+rmdir
+chmod
+clr
+
+
+HTML - Tags
+CSS - selectors
+js/java/php/python - var/fn/logics - 
+SQL - commands
+
+
+
+DDL - Data Definition Language - table creation, table modification - (model/schema) - 
+DML - Data Manipulation language - insert, delete, update - (save, delete, update)
+DCL - Data Control Language - Access
+
+
+
+DQL - search - (find)
+
+
+TCL - Transaction Control Language - rollback, commit
+
+
+CREATE, DROP, ALTER, TRUNCATE
+INSERT, DELETE, UPDATE
+GRANT, REVOKE
+
+
+COMMIT, ROLLBACK
+
+SELECT
+------------------------------------
+
+
+ACID
+ARCHITECTURE
+ER MODELS
+
+
+
+
+
+PHPMYADMIN - wamp, xamp
+
+----------------------------------------------------
+
+CREATE DATABASE
+
+USER ACCESS ON DATABASE - skip
+
+CREATE TABLE
+
+MODIFY/ALTER - OPTIONAL
+
+
+INSERT
+
+DELETE/UPDATE - OPTIONAL
+
+SELECT
+
+
+--------------------------------------------------------
+
+
+-- CREATE TABLE products (productid varchar(20), name varchar(50), price int, description VARCHAR(100), category VARCHAR(20));
+
+-- INSERT INTO products (productid, name, price, description, category) VALUES ('id002', 'Name 1', 456, 'Desc 1', 'dress');
+
+-- SELECT * FROM products
+
+
+
+
+
+
+-- CREATE SCHEMA nstest;
+
+-- CREATE TABLE users (name varchar(20), email varchar(50), mobile int);
+
+-- INSERT INTO users (name, email, mobile) VALUES ('deepak', 'test@test.com', 1231231);
+
+-- SELECT * FROM users
+
+
+
+
