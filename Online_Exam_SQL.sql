@@ -9,9 +9,12 @@
 
 -- #### ALTER TABLE users MODIFY COLUMN status boolean;
 
- -- INSERT INTO users (userid, username, name, email, mobile, password, usertype) VALUES ('id0620', 'testusername', 'fullname', 'testtest@test.com', 1231231231, 'pass123pass', 1);
+-- INSERT INTO users (userid, username, name, email, mobile, password, usertype) VALUES ('id0620', 'testusername', 'fullname', 'testtest@test.com', 1231231231, 'pass123pass', 1);
 
--- INSERT INTO users (userid, username, name, email, password, status, mobile, usertype) VALUES ('id0622', 'testusername', 'fullname', 'testtest@test.com',  'pass123pass',  false,7889552252,'1');
+-- INSERT INTO users (userid, username, name, email, password, status, mobile, usertype) VALUES ('id0625', 'testusername', 'fullname', 'anurag2@test.com',  'pass123pass',  false,7889552252,'1');
+
+-- INSERT INTO users (userid, username, name, email) VALUES ('id0626', 'testusername', 'fullname', 'anurag3@test.com');
+-- INSERT INTO users (userid, username, name) VALUES ('id0628', 'testusername', 'fullname');
 
 -- INSERT INTO users (	userid, username, name, email, mobile, password, status, usertype) VALUES ('01','rohitbahuguna','Rohit Bahuguna','rohitbahuguna@gmail.com',1025214524,'df33fd3fd2f1d',false,1);
 
@@ -39,8 +42,11 @@
 -- SELECT * FROM users WHERE mobile IS NOT NULL;
 
 -- SELECT * FROM users WHERE mobile IS NULL;
+
+-- DROP TABLE users;
 -- TRUNCATE TABLE users;
 -- ALTER TABLE users ADD PRIMARY KEY (userid);
+-- ALTER TABLE users ADD UNIQUE KEY (email);
 -- SELECT * FROM users WHERE email LIKE '%@gmail.com' AND status = false;
 -- SELECT * FROM users WHERE email IS NOT NULL OR status = 0;
 -- SELECT * FROM users WHERE email = 'tsettset@tset' AND status = false;
@@ -49,7 +55,17 @@
 -- SELECT * FROM users WHERE email LIKE '%@gmail.com' AND status = false;
 
 -- CREATE TABLE user_details (userid varchar(20), gender varchar (10), address varchar (50), profilepic varchar(200), pincode bigint, contact bigint, city varchar (50), country varchar(50), college varchar (50), company varchar (50), age int, course varchar (50), gradyear year, accountdate date, lastlogin timestamp );
+-- ALTER TABLE users ADD PRIMARY KEY (userid);
+-- ALTER TABLE user_details ADD FOREIGN KEY (userid) REFERENCES users(userid);
+-- ---------------------------------------------------
+-- ALTER TABLE users DROP FOREIGN KEY userid;
+-- ALTER TABLE user_details DROP FOREIGN KEY userid;
+-- ALTER TABLE users DROP userid;
+-- ALTER TABLE user_details DROP userid;
+-- ALTER TABLE users ADD COLUMN userid VARCHAR (20);
+-- ALTER TABLE user_details ADD COLUMN userid VARCHAR (20);
 
+-- ---------------------------------------------------------
 -- INSERT INTO user_details (userid , gender , address, profilepic , pincode , contact , city , country , college , company , age , course, gradyear , accountdate  , lastlogin  ) VALUES ('id012', 'Male', 'ludhiana,punjab','------', 141013,7584142965,'Ludhiana','India','GNDEC','Newton School',22,'Fullstack Development',2022, 29/07/2022,29/07/2022);
 
 -- INSERT INTO user_details (userid, gender) VALUES ('id001', 'male');
@@ -88,7 +104,12 @@
 
 
 -- SELECT users.name, user_details.gender FROM users INNER JOIN user_details ON users.userid = user_details.userid;
-SELECT users.name, user_details.gender FROM users INNER JOIN user_details ON users.userid = user_details.userid WHERE user_details.gender = 'male';
+-- SELECT users.name, user_details.gender FROM users INNER JOIN user_details ON users.userid = user_details.userid WHERE user_details.gender = 'male';
 -- users - name
 -- user_details - gender
 -- users.userid =========== user_details.userid
+
+-- ------------------------------------------------------------------------------------
+-- UPDATE users SET email = 'abc@gmail.com' WHERE userid = 'id006' IS NULL;
+-- DELETE FROM users WHERE userid = 'id006';
+-- UPDATE user_details SET userid = 'id004' WHERE contact = '32446454';
