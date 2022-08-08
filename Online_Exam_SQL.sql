@@ -2,7 +2,7 @@
 
 -- CREATE SCHEMA nstest;
 
--- CREATE TABLE users (userid varchar(20), username varchar(50), name varchar(50), email varchar(50), mobile bigint, password varchar(25), status int, usertype int);
+-- CREATE TABLE users (userid varchar(20), username varchar(50), name varchar(50) NOT NULL, email varchar(50), mobile bigint, password varchar(25), status int, usertype int);
 -- #### CREATE TABLE users (userid varchar(20), username varchar(50), name varchar(50), email varchar(50), mobile bigint, password varchar(25), status int DEFAULT false, usertype int);
 
 -- ALTER TABLE users MODIFY COLUMN status boolean DEFAULT false;
@@ -113,3 +113,43 @@
 -- UPDATE users SET email = 'abc@gmail.com' WHERE userid = 'id006' IS NULL;
 -- DELETE FROM users WHERE userid = 'id006';
 -- UPDATE user_details SET userid = 'id004' WHERE contact = '32446454';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+-- CREATE TABLE question(qs_id varchar(20) PRIMARY KEY,subjet_id varchar(20) NOT NULL,question varchar(500) UNIQUE KEY NOT NULL, answer1 varchar(200) NOT NULL, answer2 varchar(200) NOT NULL, answer3 varchar(200), answer4 varchar(200), answer5 varchar(200), correctanswer int NOT NULL, maxmarks int DEFAULT 4, negativemark int DEFAULT 1, difficultylevel int DEFAULT 1);
+-- ALTER TABLE question RENAME TO questions;
+-- ALTER TABLE questions AUTO_INCREMENT = 1;
+-- ALTER TABLE questions MODIFY qs_id bigint NOT NULL;
+-- ALTER TABLE questions CHANGE subjet_id subject_id varchar(20);
+-- DROP TABLE questions;
+
+-- CREATE TABLE questions(qs_id bigint NOT NULL AUTO_INCREMENT PRIMARY KEY,subject_id varchar(20) NOT NULL,question varchar(500) UNIQUE KEY NOT NULL, answer1 varchar(200) NOT NULL, answer2 varchar(200) NOT NULL, answer3 varchar(200), answer4 varchar(200), answer5 varchar(200), correctanswer int NOT NULL, maxmarks int DEFAULT 4, negativemark int DEFAULT 1, difficultylevel int DEFAULT 1);
+
+
+-- INSERT INTO questions(subject_id, question, answer1, answer2, answer3, answer4, answer5, correctanswer) VALUES( '1',' What is the value of 16*5 ?', '45','90','60', '80', '40', 4);
+-- INSERT INTO questions(subject_id,question,answer1, answer2, answer3, answer4,correctanswer) VALUES ('1','A line which cuts a pair of parallel lines is called','tangent','chord','transversal','intersector',3);
+-- INSERT INTO questions (subject_id,question,answer1,answer2,answer3,answer4, correctanswer)  VALUES ('2',"What is the capital of the newly formed Union Territory of Dadra and Nagar Haveli and Daman and Diu?","Daman","Nagar Haveli","Dadra","Silvassa",1);
+-- INSERT INTO questions(subject_id, question, answer1, answer2, answer3, answer4, correctanswer)  VALUES('2', 'Study of interaction between living organisms and environment is known as?', ' Pedology', 'Ecology', 'Biology', 'Zoology', 2 );
+
+-- INSERT INTO questions (subject_id,question,answer1,answer2,answer3,answer4,correctanswer)  VALUES (02,"Defence Research and Development Organisation (DRDO), along with which private firm, has developed a face shield for doctors and medical staff treating COVID-19 patients?","Tata","Larsen &Toubro","Wipro","HCL",3);
+
+-- INSERT INTO questions (subject_id,question,answer1,answer2,answer3,answer4,correctanswer)  VALUES (02,"What is the term of the 22nd Law Commission of India, recently approved by the Union Cabinet of India?","Two years","Three year","Five year","six year",2);
+
+-- INSERT INTO questions (subject_id,question,answer1,answer2,answer3,answer4,correctanswer)  VALUES (02,"Jharkhand banned the manufacture, sale and storage of 11 brands of pan masala for a year, to curb which harmful chemical present in them?","Magnesium carbonate","Magnesium chloride","Magnesium oxide","Sodium carbonate",1);
+
+
+
+
