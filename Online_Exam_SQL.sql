@@ -6,7 +6,7 @@
 -- #### CREATE TABLE users (userid varchar(20), username varchar(50), name varchar(50), email varchar(50), mobile bigint, password varchar(25), status int DEFAULT false, usertype int);
 
 -- ALTER TABLE users MODIFY COLUMN status boolean DEFAULT false;
-
+-- ALTER TABLE users MODIFY COLUMN usertype int DEFAULT 1;
 -- #### ALTER TABLE users MODIFY COLUMN status boolean;
 
 -- INSERT INTO users (userid, username, name, email, mobile, password, usertype) VALUES ('id0620', 'testusername', 'fullname', 'testtest@test.com', 1231231231, 'pass123pass', 1);
