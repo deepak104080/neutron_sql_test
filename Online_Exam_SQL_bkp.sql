@@ -148,8 +148,25 @@
 
 -- INSERT INTO questions (subject_id,question,answer1,answer2,answer3,answer4,correctanswer)  VALUES (02,"What is the term of the 22nd Law Commission of India, recently approved by the Union Cabinet of India?","Two years","Three year","Five year","six year",2);
 
--- INSERT INTO questions (subject_id,question,answer1,answer2,answer3,answer4,correctanswer)  VALUES (02,"Jharkhand banned the manufacture, sale and storage of 11 brands of pan masala for a year, to curb which harmful chemical present in them?","Magnesium carbonate","Magnesium chloride","Magnesium oxide","Sodium carbonate",1);
+-- INSERT INTO questions (subject_id,question,answer1,answer2,answer3,answer4,correctanswer)  VALUES (2,"Jharkhcegrwgrfacture, sale and storage of 11 brands of pan masala for a year, to curb which harmful chemical present in them?","Magnesium carbonate","Magnesium chloride","Magnesium oxide","Sodium carbonate",1);
 
 
+-- SELECT LAST_INSERT_ID();
 
 
+-- SELECT COUNT(*) FROM questions;
+-- SELECT MIN(mobile) FROM users;
+-- SELECT MAX(mobile) FROM users;
+-- SELECT SUM(mobile) FROM users;
+
+ -- SELECT DISTINCT mobile FROM users;
+
+-- SELECT * FROM USERS ORDER BY mobile DESC;
+
+-- SELECT * FROM questions WHERE qs_id BETWEEN 5 AND 25;
+
+-- SELECT * FROM questions WHERE qs_id IN (1,3,5,8);
+
+-- SELECT city, COUNT(city) FROM online_exam.user_details GROUP BY city;
+
+-- SELECT city, COUNT(city) count_city FROM online_exam.user_details GROUP BY city HAVING count_city > 2;
